@@ -1,0 +1,72 @@
+<html>
+<head> 
+<title>Incubator</title> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<style>
+html
+{font-family: Helvetica; display:inline-block; margin: 0px auto; text-align: center;}
+  h1{color: #0F3376; padding: 2vh;}p{font-size: 1.5rem;}.button{display: inline-block; background-color: #e7bd3b; border: none;
+  border-radius: 4px; color: white; padding: 16px 40px; text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;}
+  .button2{background-color: #4286f4;}
+</style>
+</head>
+<body> 
+<h1><i class="fas fa-egg" style="color:#059e8a;"></i> Egg Incubator</h1>
+ <p>
+    <i class="fas fa-fire-alt" style="color:#059e8a;"></i> 
+    <span class="dht-labels">Heating: <strong>""" + gpio_state + """</strong></span> 
+    <sup class="units">&deg;C</sup>
+  <p/>
+  <p>
+    <a href="/?led=on"><button class="button">ON</button></a>
+    <a href="/?led=off"><button class="button button2">OFF</button></a></p>
+  </p>
+
+  <p>
+    <i class="fas fa-wind" style="color:#059e8a;"></i> 
+    <span class="dht-labels">Fan: <strong>""" + gpio_state + """</strong></span> 
+  <p/>
+
+  <p>
+    <a href="/?led=on"><button class="button">ON</button></a>
+    <a href="/?led=off"><button class="button button2">OFF</button></a></p>
+  </p>
+  <p>
+    <i class="fas fa-thermometer-half" style="color:#059e8a;"></i> 
+    <span class="dht-labels">Current Temperature</span> 
+    <span>"""+str(temp)+"""</span>
+    <sup class="units">&deg;C</sup>
+  <p/>
+  <p>
+    <i class="fas fa-thermometer-half" style="color:#059e8a;"></i> 
+    <span class="dht-labels">Target Temperature</span> 
+    <span>"""+str(temp)+"""</span>
+    <sup class="units">&deg;C</sup>
+  <p/>
+  <p>
+    <a href="/?led=on"><button class="button">Set +1</button></a>
+    <a href="/?led=off"><button class="button button2">Set -1</button></a></p>
+  </p>
+  <p>
+    <i class="fas fa-tint" style="color:#00add6;"></i> 
+    <span class="dht-labels">Humidity</span>
+    <span>"""+str(temp)+"""</span>
+    <sup class="units">%</sup>
+  </p>
+
+
+  <p>
+    <i class="fas fa-video" style="color:#00add6;"></i> 
+    <span class="dht-labels">Camera view</span>
+    <span>"""+str(temp)+"""</span>
+    <sup class="units">%</sup>
+  </p>
+  <p>
+    <a href="/?led=on"><button class="button">ON</button></a>
+    <a href="/?led=off"><button class="button button2">OFF</button></a></p>
+  </p>
+
+</body>
+</html>
